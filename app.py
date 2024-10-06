@@ -1,5 +1,9 @@
-import pandas as pd 
+import pandas as pd
 
-Data_frame = pd.read_csv('.learn/assets/pokemon_data.csv') 
+data_frame = pd.read_csv('.learn/assets/us_baby_names_right.csv')
 
-print(Data_frame)
+result = data_frame.groupby('Name').sum()
+
+num_group = len(result)
+
+print(num_group)
